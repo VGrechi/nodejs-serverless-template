@@ -1,0 +1,37 @@
+{
+  "name": "nodejs-serverless-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "SET SLS_DEBUG=* && node --inspect node_modules\\serverless\\bin\\serverless offline --noTimeout --dontPrintOutput --stage=dev",
+    "setup": "chmod +x ./setup.sh && ./setup.sh",
+    "test": "SILENT=true ./node_modules/.bin/jest --runInBand --detectOpenHandles --collectCoverage=true '/specs'",
+    "deploy": "tsc && sls deploy -v --stage dev"
+  },
+  "author": "Victor Grechi",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.17",
+    "@types/jest": "^27.5.1",
+    "@types/node": "^10.12.18",
+    "jest": "^28.1.0",
+    "serverless-add-api-key": "^4.0.2",
+    "serverless-domain-manager": "^3.3.1",
+    "serverless-dotenv-plugin": "^2.3.2",
+    "serverless-iam-roles-per-function": "^2.0.2",
+    "serverless-offline": "^5.12.1",
+    "serverless-pseudo-parameters": "^2.6.1",
+    "serverless-webpack": "^5.2.0",
+    "ts-jest": "^28.0.2",
+    "ts-loader": "^5.3.3",
+    "typescript": "^4.6.4",
+    "webpack": "^4.41.6",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "typedi": "^0.8.0"
+  }
+}

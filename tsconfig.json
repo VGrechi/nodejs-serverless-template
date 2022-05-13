@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+      "target": "es2017",
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "downlevelIteration": true,
+      "module": "commonjs",
+      "declaration": true,
+      "outDir": "./lib",
+      "strict": false,
+      "skipLibCheck": true,
+      "sourceMap": true,
+  },
+  "include": [
+      "src/**/*",
+      "specs/**/*"
+  ],
+  "exclude": [
+      "specs/**/*"
+  ]
+}

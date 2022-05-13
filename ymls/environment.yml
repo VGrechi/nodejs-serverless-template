@@ -1,0 +1,2 @@
+NODE_ENV: ${self:custom.NODE_ENV.${self:provider.stage}}
+LOG_LEVEL: info

@@ -1,0 +1,21 @@
+service: nodejs-serverless-template
+
+plugins:
+    - serverless-webpack
+    - serverless-offline
+    - serverless-pseudo-parameters
+
+provider:
+    name: aws
+    runtime: nodejs12.x
+    region: us-east-1
+    stage: ${opt:stage, 'dev'}
+    environment: ${file(ymls/environment.yml)}
+
+custom: ${file(ymls/custom.yml)}
+    
+functions: ${file(ymls/functions.yml)} 
+    
+layers:
+    MyDefault:
+        path: layer

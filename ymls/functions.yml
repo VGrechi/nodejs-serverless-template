@@ -1,0 +1,10 @@
+send:
+    handler: src/handler.handler
+    timeout: 60
+    events:
+      - http:
+          method: get
+          path: /
+    layers:
+      - {Ref: MyDefaultLambdaLayer}
+
